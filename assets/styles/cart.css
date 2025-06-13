@@ -25,7 +25,6 @@ main > section {
 }
 
 .product-header {
-  width: clamp(200px, 20vw, 500px);
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
