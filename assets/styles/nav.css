@@ -1,0 +1,50 @@
+
+
+:root {
+  --header-height: 90px;
+}
+
+header {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid black;
+}
+
+.main-nav > .logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-nav li {
+  list-style: none;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.ads-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  background-color: #48A6A7;
+  color: white;
+}
