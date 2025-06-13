@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/nav.css">
+  <link rel="stylesheet" href="assets/styles/detail.css">
+  <link rel="stylesheet" href="assets/styles/footer.css">
   <title>Product Detail</title>
 </head>
 <body>
@@ -10,7 +13,7 @@
     <nav class="main-nav">
 
       <div class="logo">
-        <a href="">DIVES</a>
+        <a href="index.html">DIVES</a>
       </div>
 
       <ul>
@@ -31,8 +34,71 @@
     </nav>
   </header>
 
-  <main></main>
+  <main>
+    <section class="image-container">
+      <img src="assets/media/Lenovo-Legion-5-16IRX9-Luna-Gray.png" alt="">
+    </section>
+    <section class="product-detail">
+      <h3 class="product-name">Lenovo Legion</h3>
+      <h3 class="product-price">Price: Rp23.000.000,00</h3>
 
-  <footer></footer>
+      <div class="amount-container">
+        <p>
+          Amount
+          <div class="amount">
+            <button id="increase">+</button>
+            <input id="amount" value="0" min="0" type="text"> 
+            <button id="decrease">-</button>
+          </div>
+        </p>
+      </div>
+
+      <div class="add-to-cart-container">
+        <button>Add To Cart</button>
+      </div>
+
+      <div class="detail-container">
+
+        <h3 class="detail-header"><u>Detail</u></h3>
+
+        <p class="detail">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, commodi voluptatibus culpa odit impedit sapiente nihil eius ullam eum maxime assumenda sed, laudantium delectus quisquam, nam non quia ex pariatur!
+          Accusamus ex et excepturi, placeat neque in recusandae nobis, amet rem esse numquam cum impedit aliquam repellendus, tempora ipsa dolor similique id animi possimus perspiciatis minima vel sit maxime? Iste.
+          Iusto, quia laboriosam qui minima, nostrum sit maiores illo reiciendis reprehenderit assumenda, dolore id quidem quas? Soluta dolorem quaerat eos laudantium, nobis minus amet nostrum reprehenderit, sequi quasi nisi quod?
+        </p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;Dives All Rights Reserved</p>
+  </footer>
+
+
+  <script>
+    (function() {
+      const input = document.getElementById('amount');
+      const btnIncrease = document.getElementById('increase');
+      const btnDecrease = document.getElementById('decrease');
+      const maxLimit = 100; // Maximum limit
+      function updateValue(delta) {
+        const currentValue = Number(input.value) || 0;
+        const newValue = currentValue + delta;
+        // Prevent value going below 0
+        if (newValue < 0) {
+          return;
+        }
+        // Prevent value going above maxLimit
+        if (newValue > maxLimit) {
+          input.value = maxLimit;
+        } else {
+          input.value = newValue;
+        }
+      }
+      btnIncrease.addEventListener('click', () => updateValue(1));
+      btnDecrease.addEventListener('click', () => updateValue(-1));
+    })();
+  </script>
 </body>
 </html>
