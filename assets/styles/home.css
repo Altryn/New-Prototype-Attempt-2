@@ -14,7 +14,7 @@
 .products {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 150px);
+  grid-template-columns: repeat(auto-fill, 135px);
   gap: 5px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .product-image {
-  max-width: 150px;
+  max-width: 135px;
   border: 1px solid black;
 }
 .product-name {
